@@ -14,6 +14,13 @@ spring:
 #  yml文件中都要增加zipkin server的地址即可 spring.zipkin.base-url:http://localhost:9411
 #-----------------------介绍springcloud中所有需要被追踪的项目（除了dependencies除外，包括eurekaserver）
 
+#  springcloud中所有需要被监控的项目（除了dependencies除外，包括eurekaserver）pom文件中都要增加的依赖
+  boot:
+    admin:
+      client:
+        url: http://localhost:8084
+#  springcloud中所有需要被监控的项目（除了dependencies除外，包括eurekaserver）pom文件中都要增加的依赖
+
 server:
   port: 8765
 #feign自带netflix的hystrix熔断器，此处开启
